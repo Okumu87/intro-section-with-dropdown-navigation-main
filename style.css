@@ -14,9 +14,74 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: var(--medium-gray);
+}
+
 body {
-  font-size: 18px;
   font-family: "Epilogue", serif;
+  background-color: var(--almost-white);
+}
+/* nav */
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1.5rem 2rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+/* logo */
+.logo {
+  margin-top: 0.3rem;
+}
+
+/* left--nav-list */
+
+.left--nav-list,
+li {
+  margin-left: 1rem;
+}
+
+.left--nav-list li {
+  margin-left: 3rem;
+}
+
+/* right--nav-list */
+
+.right--nav-list {
+  margin-left: 74rem;
+}
+
+/* features-icon */
+
+.features-icon,
+.company-icon {
+  margin-left: 0.5rem;
+}
+
+/* button */
+
+.register {
+  border: solid 2px var(--medium-gray);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+}
+
+.register a:hover {
+  color: black;
+  border: black;
+}
+
+.login a:hover {
+  color: black;
 }
 
 /* Attributes  */
