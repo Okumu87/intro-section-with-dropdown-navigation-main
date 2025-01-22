@@ -84,6 +84,26 @@ li {
   color: black;
 }
 
+/* main-content  */
+
+.main-content {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  margin: 5rem;
+}
+
+.left-content {
+}
+
+.right-content {
+  img {
+    height: 50rem;
+  }
+}
+
 /* Attributes  */
 
 .attribution {
