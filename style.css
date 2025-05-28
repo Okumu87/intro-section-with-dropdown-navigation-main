@@ -1,0 +1,116 @@
+:root{
+    --almost-White: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+    --text-color: #333;
+    --font-family: "Epilogue", sans-serif;
+}
+
+@media(max-width:768px){
+    /* mobile first */
+
+
+    body{
+        position: relative  ;
+    }
+
+/* nav */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    padding: 1rem;
+  
+    
+}
+
+.menu-list{
+    position: absolute;
+    top: 0;
+    right:0;
+    margin-top: -18px;
+    margin-left: 50px;
+    width: 60%;
+    height: 100vh;
+    background-color: var(--almost-White);
+    display: flex   ;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* hero-img */
+.hero-img-mobile{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2.5rem ;
+}
+/* content section */
+
+.content-section{
+    padding: 2rem;
+}
+.content{
+    text-align: center;
+
+    h1{
+        color: var(--almost-black);
+        font-size: 3.8rem;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        color: var(--medium-gray);
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+
+    /* learn btn */
+
+    .btn{
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background-color: var(--almost-black);
+        color: var(--almost-White);
+        font-size: 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 1.5rem;
+    }
+    .btn:hover{
+        background-color: var(--medium-gray);
+    }
+    .btn:active{
+        background-color: var(--almost-black);
+    }
+    .btn:focus{
+        outline: 2px solid var(--almost-black);
+        outline-offset: 2px;
+    }
+}
+
+/* footer section */
+
+.logos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin: 2rem;
+
+   img{
+    width: 20%;
+   }
+}
+}
