@@ -6,7 +6,7 @@
     --font-family: "Epilogue", sans-serif;
 }
 
-@media(max-width:1175px){
+@media(max-width:626px){
     /* mobile first */
     body{
         position: relative  ;
@@ -166,4 +166,5 @@
 
 
 }
-   
+   .hide{
+    display: none;}
