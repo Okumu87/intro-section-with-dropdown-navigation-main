@@ -39,6 +39,26 @@
     
  
 }
+
+/* feature and company drop down buttons  */
+
+.features, .company{
+    display: flex;
+    gap: 2rem ;
+    justify-content: center;
+    align-items: center;
+
+    img{
+     width: 1.5rem;
+     
+    }
+}
+
+
+
+
+
+
 /* menu btn */
 .menu--list__btn{
     display: flex;
@@ -47,8 +67,21 @@
     place-content: center;
     align-items: center;
     width: 100%;
-    margin:  auto;
+    margin:  28rem auto;
     color: var(--medium-gray);
+
+    .register{
+        border: 1px solid var(--medium-gray);
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        width: 90%;
+        text-align: center;
+       
+    }
+
+    .login{
+        padding: 2rem ;
+    }
   
 }
 
