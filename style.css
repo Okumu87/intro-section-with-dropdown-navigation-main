@@ -40,7 +40,7 @@
  
 }
 
-/* feature and company drop down buttons  */
+/* feature and company   */
 
 .features, .company{
     display: flex;
@@ -55,6 +55,9 @@
 }
 
 
+/* dropdown menu */
+
+
 
 
 
@@ -67,7 +70,7 @@
     place-content: center;
     align-items: center;
     width: 100%;
-    margin:  28rem auto;
+    margin:  auto;
     color: var(--medium-gray);
 
     .register{
