@@ -10,7 +10,7 @@
     /* mobile first */
     body{
         position: relative  ;
-        overflow: hidden;
+        
     }
 
 /* nav */
@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     margin: 2rem;
     padding: 1rem;
   
@@ -90,34 +91,36 @@
 
 .menu-list{
     position: absolute;
-    top: 0;
+    top: -1rem;
+    left: 23rem;
     right:0;
+    bottom: 0;
     margin-top: -18px;
-    margin-left: 50px;
     width:65%;
-    height: 100vh;
+    height: 2000%;
     background-color: var(--almost-White);
     display: flex   ;
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
-    gap: 1rem;
     z-index: 1000;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+  
+ 
 }
 
 .left--shadow--menu_list{
-    display: block;
     position: absolute;
-    width: 35%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -2rem;
+    width: 100%;
     margin-top: -2rem;
-    margin-bottom: -2rem;
+    margin-bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     opacity: 5;
-    height: 100vh;
-    top: 0;
-    left: 0;
+    height: 2000%;
+    
     
 
 }
@@ -199,8 +202,12 @@
    }
 }
 
-
+/* hide */
 
 }
    .hide{
     display: none;}
+
+    /* breaking points  */
+
+ 
