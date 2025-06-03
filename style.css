@@ -22,24 +22,51 @@
     position: relative;
     margin: 2rem;
     padding: 1rem;
-  
-    ul{
-        position: absolute;
-        top: 8rem;
-        margin-left: 2rem;
-        font-weight: 500;
-        font-size: 2rem;
-        color: var(--medium-gray)  ;
 
-        li{
-            margin-bottom: 2rem;
-        }
+   ul{
+    position: absolute;
+    top: 8rem;
+    margin-left: 2rem;
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--medium-gray)  ;
 
-      
+    li{
+        margin-bottom: 2rem;
     }
-    
+
+  
+}
  
 }
+
+/* dropdown */
+
+.navbar .dropdown{
+    /* display: none; */
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    background-color: var(--almost-White);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .dropdown ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar .dropdown ul li{
+    margin-bottom: 1rem;
+}
+.navbar .dropdown ul li a{
+    text-decoration: none;
+    color: var(--medium-gray);
+    font-size: 1.5rem;
+}
+
 
 /* feature and company   */
 
@@ -54,13 +81,6 @@
      
     }
 }
-
-
-/* dropdown menu */
-
-
-
-
 
 
 /* menu btn */
@@ -88,11 +108,11 @@
     }
   
 }
-
+/* right side  */
 .menu-list{
     position: absolute;
     top: -1rem;
-    left: 23rem;
+    left: 22rem;
     right:0;
     bottom: 0;
     margin-top: -18px;
@@ -108,6 +128,7 @@
  
 }
 
+/* left shadow */
 .left--shadow--menu_list{
     position: absolute;
     top: 0;
@@ -124,6 +145,10 @@
     
 
 }
+
+/* dropdown menu */
+
+
 
 /* hero-img */
 .hero-img-mobile{
