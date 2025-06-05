@@ -7,230 +7,70 @@
 }
 
 @media(max-width:626px){
-    /* mobile first */
-    body{
-        position: relative  ;
-        
-    }
+    /* mobile-design first */
 
-/* nav */
-
-.navbar{
+nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    margin: 2rem;
-    padding: 1rem;
-
-   ul{
-    position: absolute;
-    top: 8rem;
-    margin-left: 2rem;
-    font-weight: 500;
-    font-size: 2rem;
-    color: var(--medium-gray)  ;
-
-    li{
-        margin-bottom: 2rem;
-    }
-
-  
-}
- 
-}
-
-/* dropdown */
-
-.navbar .dropdown{
-    /* display: none; */
-    position: absolute;
-    top: 4rem;
-    right: 2rem;
-    background-color: var(--almost-White);
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .dropdown ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.navbar .dropdown ul li{
-    margin-bottom: 1rem;
-}
-.navbar .dropdown ul li a{
-    text-decoration: none;
-    color: var(--medium-gray);
-    font-size: 1.5rem;
-}
-
-
-/* feature and company   */
-
-.features, .company{
-    display: flex;
-    gap: 2rem ;
-    justify-content: center;
-    align-items: center;
-
-    img{
-     width: 1.5rem;
-     
-    }
-}
-
-
-/* menu btn */
-.menu--list__btn{
-    display: flex;
-    flex-direction: column  ;
-    justify-content: center;
-    place-content: center;
-    align-items: center;
-    width: 100%;
-    margin:  auto;
-    color: var(--medium-gray);
-
-    .register{
-        border: 1px solid var(--medium-gray);
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-        width: 90%;
-        text-align: center;
-       
-    }
-
-    .login{
-        padding: 2rem ;
-    }
-  
-}
-/* right side  */
-.menu-list{
-    position: absolute;
-    top: -1rem;
-    left: 22rem;
-    right:0;
-    bottom: 0;
-    margin-top: -18px;
-    width:65%;
-    height: 2000%;
-    background-color: var(--almost-White);
-    display: flex   ;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    z-index: 1000;
-  
- 
-}
-
-/* left shadow */
-.left--shadow--menu_list{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: -2rem;
-    width: 100%;
-    margin-top: -2rem;
-    margin-bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 5;
-    height: 2000%;
-    
-    
-
-}
-
-/* dropdown menu */
-
-
-
-/* hero-img */
-.hero-img-mobile{
-    width: 100%;
-    height: auto;
-    margin-bottom: 2.5rem ;
-}
-/* content section */
-
-.content-section{
     padding: 2rem;
+   
 }
+
 .content{
+
     text-align: center;
 
     h1{
-        color: var(--almost-black);
-        font-size: 3.8rem;
-        margin-bottom: 1rem;
+        margin-top: 1rem;
+        font-size: 3.5rem;
+        color: var(--almost-black) ;
     }
 
     p{
-        color: var(--medium-gray);
+        margin: 1.5rem ;
         font-size: 1.8rem;
-        line-height: 1.5;
+        color: var(--medium-gray);
+      
     }
 
-    /* learn btn */
+    /* content-btn */
 
-    .btn{
-        display: inline-block;
-        padding: 0.8rem 1.5rem;
+    .btn-content{
+        padding: 1.4rem 2.5rem;
+        border-radius: 15px;
         background-color: var(--almost-black);
         color: var(--almost-White);
-        font-size: 1.5rem;
-        border-radius: 5px;
-        text-decoration: none;
-        margin-top: 1.5rem;
-    }
-    .btn:hover{
-        background-color: var(--medium-gray);
-    }
-    .btn:active{
-        background-color: var(--almost-black);
-    }
-    .btn:focus{
-        outline: 2px solid var(--almost-black);
-        outline-offset: 2px;
+       
     }
 }
 
-/* close-btn */
+/* footer */
 
-.close-btn{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 2rem;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-/* footer section */
-
-.logos{
+footer{
+   
+  .logos{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-
     margin: 2rem;
+  
 
-   img{
-    width: 20%;
-   }
+    img{
+       width: 75px;
+      
+    }
+  }
+
+  
+  }
 }
 
+/* mobile-active design */
 /* hide */
 
-}
-   .hide{
+
+   .hidden {
     display: none;}
 
     /* breaking points  */

@@ -21,92 +21,78 @@
   </style>
 </head>
 <body>
-<!-- nav -->
-  
-   
- <nav class="navbar">
-    <!-- left--shadow_menu -->
-  <div class="left--shadow--menu_list "></div>  <!--hide  -->
-  <div class="logo">
-    <img src="./images/logo.svg" alt="Logo">
-  </div>
+  <div class="overlay-right"></div>
+  <div class="overlay-left"></div>
+  <nav>
+<div class="logo">
+  <img src="./images/logo.svg" alt="logo">
+</div>
+<a href="#" class="hamburger"><img src="./images/icon-menu.svg" alt="Three horizontal lines representing the main navigation menu button in a modern website header"></a>
+<!-- nav-links -->
+<div class="nav-links hidden">
+  <ul>
+    <li>
+      <a href="#">Features</a>
 
-  <!-- menu button -->
-  <button type="button" class="menu">
-    <img src="./images/icon-menu.svg" alt="menu">
-  </button>
-
-
-
-  <!-- menu -->
-
-<div class="menu-list  "> <!--hide  -->
-
-<a href="#" class="close-btn"><img src="./images/icon-close-menu.svg" alt="close-btn"></a>
-  <ul class="menu-list__items">
-    <li class="menu-item features ">
-    <a href="#" class="features">Features <img src="./images/icon-arrow-down.svg" alt="icon-arrow-down"></a> 
-    <!-- dropdown menu features -->
-      <ul class="dropdown  " >
-        <li class="dropdown-item"><a href="#"><img src="./images/icon-todo.svg" alt="Todo-list">Todo List</a></li>
-        <li class="dropdown-item"><a href="#"><img src="./images/icon-calendar.svg" alt="calendar">Calendar</a></li>
-        <li class="dropdown-item"><a href="#"><img src="./images/icon-reminders.svg" alt="reminders">Reminders</a></li>
-        <li class="dropdown-item"><a href="#"><img src="./images/icon-planning.svg" alt="Planning">Planning</a></li>
+      <!-- dropdown-features  -->
+    <ul class=" dropdown-features dropdown ">
+      <li>
+        <a href="#"><img src="./images/icon-todo.svg" alt="Todo list">Todo List</a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/icon-calendar.svg" alt="Calendar">Calendar</a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/icon-reminders.svg" alt="Reminders">Reminders</a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/icon-calendar.svg" alt="Planning">Planning</a>
+      </li>
+    </ul>
+  </li>
+    <li>
+      <a href="#">Company</a>
+      <ul class=" dropdown-company dropdown ">
+        <li><a href="#">History</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Blog</a></li>
       </ul>
     </li>
-    
-    <li class="menu-item company"><a href="#" class="company" >Company <img src="./images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
-     <!-- dropdown menu company -->
-     <ul class="dropdown  hide" >
-      <li><a href="#">History</a></li>
-      <li><a href="#">Our Team</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-    </li>
-     
-    <li class="menu-item"><a href="#">Careers</a></li>
-    <li class="menu-item"><a href="#">About</a></li>
-   
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">About</a></li>
   </ul>
-
- <div class="menu--list__btn">
-
-  <a href="#" class="login">Login</a>
-  <a href="#" class="register">Register</a>
- 
- </div>
 </div>
- 
-  <!-- end menu -->
- </nav>
+<!-- nav-buttons -->
+<div class="nav-buttons hidden">
+  <a href="#" class="login">Login</a>
+  <a href="#"class="register">Register</a>
+</div>
+  </nav>
 
-  <!-- hero-img -->
-
-  <section class="hero-section">
-    <div class="hero">
-      <img src="./images/image-hero-mobile.png" alt="hero image" class="hero-img-mobile">
-    </div>
+<main>
+  <!-- hero section -->
+  <section class="hero">
+    <img src="./images/image-hero-mobile.png" alt="hero">
   </section>
-  <!-- content section  -->
-
-  <section class="content-section">
-    <div class="content">
-      <h1>Make remote work</h1>
-      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-      <button class="btn">Learn more</button>
-    </div>
-
-  </section>
-
-  <!-- footer section -->
-   <section class="footer-section">
-    <div class="logos">
-      <img src="./images/client-databiz.svg" alt="Databiz logo">
-      <img src="./images/client-audiophile.svg" alt="Audiophile logo">
-      <img src="./images/client-meet.svg" alt="Meet logo">
-      <img src="./images/client-maker.svg" alt="Maker logo">
-    </div>
+  <!-- content section -->
+   <section class="content">
+    <h1>Make remote work</h1>
+    <p>  Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+      <!-- button-content -->
+       <a href="#" class="btn-content">Learn more</a>
    </section>
+</main>
+<footer>
+  <div class="logos">
+    <img src="./images/client-databiz.svg" alt="client-databiz">
+    <img src="./images/client-audiophile.svg" alt="client-audiophile">
+    <img src="./images/client-meet.svg" alt="client-meet">
+    <img src="./images/client-maker.svg" alt="client-maker">
+  
+   
+  </div>
+</footer>
 
   <!-- Features
   Company
