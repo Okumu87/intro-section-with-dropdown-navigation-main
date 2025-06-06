@@ -21,52 +21,64 @@
   </style>
 </head>
 <body>
-  <div class="overlay-right"></div>
-  <div class="overlay-left"></div>
+  <div class="item overlay-left hidden"></div><!-- hidden -->
   <nav>
 <div class="logo">
   <img src="./images/logo.svg" alt="logo">
 </div>
-<a href="#" class="hamburger"><img src="./images/icon-menu.svg" alt="Three horizontal lines representing the main navigation menu button in a modern website header"></a>
+<a href="#" class="hamburger " id="hamburger-menu"><img src="./images/icon-menu.svg" alt="Three horizontal lines representing the main navigation menu button in a modern website header"></a>
 <!-- nav-links -->
-<div class="nav-links hidden">
-  <ul>
-    <li>
-      <a href="#">Features</a>
-
-      <!-- dropdown-features  -->
-    <ul class=" dropdown-features dropdown ">
-      <li>
-        <a href="#"><img src="./images/icon-todo.svg" alt="Todo list">Todo List</a>
-      </li>
-      <li>
-        <a href="#"><img src="./images/icon-calendar.svg" alt="Calendar">Calendar</a>
-      </li>
-      <li>
-        <a href="#"><img src="./images/icon-reminders.svg" alt="Reminders">Reminders</a>
-      </li>
-      <li>
-        <a href="#"><img src="./images/icon-calendar.svg" alt="Planning">Planning</a>
-      </li>
-    </ul>
+<div class="item nav-links hidden"> <!-- hidden -->
+  <!-- close-btn -->
+   <a href="#"> <img class="close-btn " id="close-btn" src="./images/icon-close-menu.svg" alt="close-btn"></a>
+ 
+  <ul class="nav-list">
+    <li class="features">
+     <a href="#" >Features</a> <img class="arrow-down" id="arrow-down-features" src="./images/icon-arrow-down.svg" alt="icon-arrow-down"> 
   </li>
+   <!-- dropdown-features  -->
     <li>
-      <a href="#">Company</a>
-      <ul class=" dropdown-company dropdown ">
+      <ul class=" dropdown-features  hidden collapse" ><!-- hidden -->
+        <li>
+          <img src="./images/icon-todo.svg" alt="Todo list"> <a href="#">Todo List</a>
+        </li>
+        <li>
+          <img src="./images/icon-calendar.svg" alt="Calendar"><a href="#">Calendar</a>
+        </li>
+        <li>
+          <img src="./images/icon-reminders.svg" alt="Reminders"><a href="#">Reminders</a>
+        </li>
+        <li>
+          <img src="./images/icon-calendar.svg" alt="Planning"> <a href="#">Planning</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="company">
+      <a href="#">Company</a> <img class="arrow-down" id="arrow-down-company"  src="./images/icon-arrow-down.svg" alt="icon-arrow-down"> 
+    </li>
+    <!-- dropdown -->
+     <li>
+      <ul class=" dropdown-company hidden collapse" ><!-- hidden -->
         <li><a href="#">History</a></li>
         <li><a href="#">Our Team</a></li>
         <li><a href="#">Blog</a></li>
       </ul>
-    </li>
+     </li>
     <li><a href="#">Careers</a></li>
     <li><a href="#">About</a></li>
+
+   
+  </ul>
+
+   <!-- nav-buttons -->
+   <ul class="nav-buttons">
+    <li><a href="#" class="login">Login</a></li>
+    <li><a href="#"class="register">Register</a></li>
   </ul>
 </div>
-<!-- nav-buttons -->
-<div class="nav-buttons hidden">
-  <a href="#" class="login">Login</a>
-  <a href="#"class="register">Register</a>
-</div>
+
+
   </nav>
 
 <main>
