@@ -27,7 +27,7 @@ const dropdownFeatures = document.getElementById('arrow-down-features');
 
 dropdownFeatures.addEventListener('click', function() {
     const dropdownContent = document.querySelector('.dropdown-features');
-    const arrowIcon = dropdownFeatures.querySelector('img');
+    const arrowIcon = dropdownFeatures.querySelector('arrow-down-features');
 
     // Toggle visibility of dropdown content
     dropdownContent.classList.toggle('hidden');
