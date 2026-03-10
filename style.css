@@ -1,0 +1,37 @@
+
+:root{
+    --primary-Gray-50: hsl(0, 0%, 98%);
+    --secondary-Gray-500: hsl(0, 0%, 41%);
+    --Gray-950: hsl(0, 0%, 8%);
+    --white: hsl(0, 0%, 100%);
+}
+/* resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    font-family: "Epilogue", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* attribution */
+
+  .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
