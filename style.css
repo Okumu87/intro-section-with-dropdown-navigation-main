@@ -110,7 +110,11 @@ main{
 
 }
 
+/* text content */
 
+.text-content{
+  margin-top: 10rem;
+}
 
 
 /* attribution */
