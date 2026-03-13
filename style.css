@@ -12,6 +12,11 @@
     box-sizing: border-box;
 }
 
+body{
+    line-height: 1;
+    font-size: 18px;
+    font-family: "Epilogue", sans-serif;
+}
 
 .content{
     max-width: 1440px;
@@ -44,10 +49,7 @@ a{
     text-decoration: none;
 }
 
-body{
-    font-size: 18px;
-    font-family: "Epilogue", sans-serif;
-}
+
 
 /* nav */
 nav{
@@ -72,9 +74,6 @@ nav{
     margin-left: 4rem;
 }
 
-.logo img{
-    margin-top: 1rem;
-}
 
 /* auth-links  */
 
@@ -98,7 +97,7 @@ nav{
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 10rem;
     padding: 2rem;
     margin: 2.5rem 5rem;
 }
@@ -113,9 +112,40 @@ main{
 /* text content */
 
 .text-content{
-  margin-top: 10rem;
-}
+  margin-top: 8rem;
 
+  h1{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  p{
+    color: var(--secondary-Gray-500);
+    font-size: 1.35rem;
+    line-height: 1.5;
+  }
+
+  .learn-more{
+    display: inline-block;
+    margin-top: 3.5rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: var(--white);
+    background-color:var(--Gray-950);
+  }
+
+  .logo-content{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 8rem;
+
+ img{
+    width: 100px;
+ }
+}
+}
 
 /* attribution */
 
