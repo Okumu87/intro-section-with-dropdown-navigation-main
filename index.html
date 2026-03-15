@@ -19,22 +19,22 @@
         <a href="#">Features <img class="arrow-down"  src="./images/icon-arrow-down.svg" alt="dropdown icon">
         </a>
 
-        <ul class="sub-nav sub-nav__features hide">
-          <li><a href="#"><img src="./images/icon-todo.svg" alt="">Todo List</a></li>
-          <li><a href="#"><img src="./images/icon-calendar.svg" alt="">Calender</a></li>
-          <li><a href="#"><img src="./images/icon-reminders.svg" alt="">Reminders</a></li>
-          <li><a href="#"><img src="./images/icon-planning.svg" alt="">Planning</a></li>
+        <ul class="sub-nav sub-nav__features hidden-sub-nav">
+          <li><a href="#" class="dropdown-toggle"><img src="./images/icon-todo.svg" alt="Todo List icon">Todo List</a></li>
+          <li><a href="#" class="dropdown-toggle"><img src="./images/icon-calendar.svg" alt="Calender icon">Calender</a></li>
+          <li><a href="#" class="dropdown-toggle"><img src="./images/icon-reminders.svg" alt="Reminders icon">Reminders</a></li>
+          <li><a href="#" class="dropdown-toggle"><img src="./images/icon-planning.svg" alt="Planning icon">Planning</a></li>
         </ul>
         </li>
         <li>
-          <a href="#">Company <img class="arrow-down" src="./images/icon-arrow-down.svg" alt="dropdown icon"></a>
-          <ul class="sub-nav sub-nav__company hide">
-            <li><a href="#">History</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Blog</a></li>
+          <a href="#" aria-haspopup="true" aria-expanded="false">Company <img class="arrow-down" src="./images/icon-arrow-down.svg" alt="dropdown icon"></a>
+          <ul class="sub-nav sub-nav__company hidden-sub-nav">
+            <li><a href="#" class="dropdown-toggle">History</a></li>
+            <li><a href="#" class="dropdown-toggle">Our Team</a></li>
+            <li><a href="#" class="dropdown-toggle">Blog</a></li>
           </ul>
         </li>
-        <li><a href="#">Careers</a></li>
+       <li><a href="#">Careers</a></li>
        <li><a href="#">About</a></li>
     </ul>
     </div>
@@ -50,7 +50,7 @@
     <div class="text-content">
     <h1>Make remote work</h1>
     <p>Get your team in sync, no matter your location. Streamline processes,create team rituals, and watch productivity soar.</p>
-    <a href="#" class="learn-more">Learn more</a>
+    <a href="#" class="learn-more__btn">Learn more</a>
 
     <div class="logo-content">
       <img src="./images/client-databiz.svg" alt="databiz logo">
@@ -74,5 +74,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
     Coded by <a href="#" target="_blank" rel="noopener">Christopher</a>.
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
