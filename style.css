@@ -1,72 +1,210 @@
-/* Layout Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Epilogue', sans-serif; }
+:root {
+  --primary-Gray-50: hsl(0, 0%, 98%);
+  --secondary-Gray-500: hsl(0, 0%, 41%);
+  --Gray-950: hsl(0, 0%, 8%);
+  --white: hsl(0, 0%, 100%);
+}
 
-.navbar {
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+ul { list-style: none; }
+li a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: var(--primary-Gray-50);
+  color: var(--Gray-950);
+  overflow-x: hidden;
+}
+
+/* Nav Styles */
+
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 1.5rem 2.5rem;
+  font-size: .9rem;
 }
 
-.nav-left, .nav-links {
+.nav-left {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 4rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+
+.nav-links > li { 
+    position: relative; 
+    padding: 0.5rem 0; 
+a{
+    color: var(--secondary-Gray-500);
+}
+
+}
+
+
+
+.nav-item:hover { color: var(--Gray-950); }
+
+/* logo */
+.logo-img{
+  padding-top: .5rem;
 }
 
 /* Dropdown Logic */
-.dropdown { position: relative; }
-
-.dropdown-content {
-  display: none; /* Hide by default */
+.sub-nav {
   position: absolute;
-  top: 100%;
-  right: 0;
-  background: white;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+  top: 120%; /* Space below the link */
+  background: var(--white);
+  padding: 1.5rem;
   border-radius: 10px;
-  padding: 20px;
-  min-width: 150px;
-  z-index: 10;
-}
-
-.dropdown:hover .dropdown-content {
+  box-shadow: 0px 10px 40px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
+  min-width: 150px;
+  z-index: 10;
+  /* Hide state */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
+
+/* Show dropdown on hover (for desktop) */
+.has-dropdown:hover .sub-nav {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+
+.features-dropdown { right: 0; } /* Align to right of link */
+.company-dropdown { left: 0; }   /* Align to left of link */
+
+.sub-nav a { display: flex; align-items: center; gap: 10px; }
+.sub-nav img { width: 16px; }
+
+.auth-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-shrink: 0;
+
+  a{
+    color: var(--secondary-Gray-500);
+    text-decoration: none;
+  }
+}
+
+/* Make sure the register button behaves like a button */
+.register {
+  white-space: nowrap; 
+  display: inline-block;
+  border: 1.2px solid var(--secondary-Gray-500); 
+  padding: 0.5rem 1.5rem;
+  border-radius: 14px;
+}
+
 
 /* Hero Section */
 .hero {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   max-width: 1200px;
-  margin: 50px auto;
-  align-items: flex-end; /* Aligns text to bottom of image height */
-  gap: 100px;
-  padding: 0 20px;
+  margin: 2rem auto;
+  padding: 2rem;
+  align-items: center;
+  gap: 2rem;
 }
 
-.hero-content { flex: 1; }
-.hero-image { flex: 1; }
-.hero-image img { width: 100%; height: auto; }
+.text-content{
+    margin-top: 3rem;
+}
 
-h1 {
-  font-size: 5rem;
+.text-content h1 {
+  font-size: clamp(3rem, 8vw, 5rem); /* Responsive font size */
   line-height: 1;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
 }
 
-.btn-main {
-  background: black;
-  color: white;
-  padding: 15px 30px;
+.text-content p {
+  color: var(--secondary-Gray-500);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  max-width: 440px;
+  margin-bottom: 5rem;
+}
+
+.learn-more__btn {
+  background: var(--Gray-950);
+  color: var(--white);
+  padding: 1.1rem 2rem;
   border-radius: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+  font-size: .9rem;
+  border: 1px solid var(--Gray-950);
+  text-decoration: none;
 }
 
-.btn-main:hover {
+.learn-more__btn:hover {
   background: transparent;
-  color: black;
+  color: var(--Gray-950);
+}
+
+.client-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem;
+  filter: brightness(0.5); /* Makes logos look uniform */
+
+
+}
+
+.client-logos img { 
+    max-width: 80px; 
+    height: auto; 
+    filter: grayscale(100%) opacity(0.7); 
+    transition: filter 0.3s ease;
+}
+
+.client-logos img:hover {
+    filter: grayscale(0%) opacity(1); 
+}
+
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 480px;
+  display: block;
+  margin-left: auto;
+}
+
+/* Mobile Tweak */
+@media (max-width: 772px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .desktop-only { display: none; }
+  .nav-links, .auth-links { display: none; } /* You'll need a hamburger menu for these */
+}
+
+/* attribution  */
+
+.attribution{
+    text-align: center;
+    margin-top: 5rem;
+    font-size: .8rem;
+    color: var(--secondary-Gray-500);
 }

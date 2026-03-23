@@ -9,53 +9,65 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 <body>
-<header class="navbar">
-  <div class="nav-left">
-    <img src="./images/logo.svg" alt="Snap Logo" class="logo">
-    <nav class="nav-links">
-      <div class="dropdown">
-        <button class="dropbtn">Features <img src="icon-arrow-down.svg" alt=""></button>
-        <div class="dropdown-content">
-          <a href="#"><img src="icon-todo.svg" alt=""> Todo List</a>
-          <a href="#"><img src="icon-calendar.svg" alt=""> Calendar</a>
-          <a href="#"><img src="icon-reminders.svg" alt=""> Reminders</a>
-          <a href="#"><img src="icon-planning.svg" alt=""> Planning</a>
-        </div>
+<div class="content">
+  <header>
+    <nav>
+      <div class="nav-left">
+        <img src="./images/logo.svg" alt="snap logo" class="logo-img">
+        
+        <ul class="nav-links">
+          <li class="has-dropdown">
+            <a href="#" class="nav-item">Features <img class="arrow-down" src="./images/icon-arrow-down.svg" alt=""></a>
+            <ul class="sub-nav features-dropdown hidden-sub-nav">
+              <li><a href="#"><img src="./images/icon-todo.svg" alt=""> Todo List</a></li>
+              <li><a href="#"><img src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
+              <li><a href="#"><img src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
+              <li><a href="#"><img src="./images/icon-planning.svg" alt=""> Planning</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#" class="nav-item">Company <img class="arrow-down" src="./images/icon-arrow-down.svg" alt=""></a>
+            <ul class="sub-nav company-dropdown hidden-sub-nav">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="nav-item">Careers</a></li>
+          <li><a href="#" class="nav-item">About</a></li>
+        </ul>
       </div>
-      <div class="dropdown">
-        <button class="dropbtn">Company <img src="icon-arrow-down.svg" alt=""></button>
-        <div class="dropdown-content">
-          <a href="#">History</a>
-          <a href="#">Our Team</a>
-          <a href="#">Blog</a>
-        </div>
-      </div>
-      <a href="#">Careers</a>
-      <a href="#">About</a>
-    </nav>
-  </div>
-  <div class="nav-right">
-    <button class="btn-login">Login</button>
-    <button class="btn-register">Register</button>
-  </div>
-</header>
 
-<main class="hero">
-  <section class="hero-content">
-    <h1>Make remote work</h1>
-    <p>Get your team in sync, no matter your location. Streamline processes, create corporate rituals, and watch productivity soar.</p>
-    <button class="btn-main">Learn more</button>
-    <div class="client-logos">
-      <img src="client-databiz.svg" alt="Databiz">
-      <img src="client-audiophile.svg" alt="Audiophile">
-      <img src="client-meet.svg" alt="Meet">
-      <img src="client-maker.svg" alt="Maker">
+      <div class="auth-links">
+        <a href="#" class="login">Login</a>
+        <a href="#" class="register">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="text-content">
+      <h1>Make <br class="desktop-only"> remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <a href="#" class="learn-more__btn">Learn more</a>
+
+      <div class="client-logos">
+        <img src="./images/client-databiz.svg" alt="databiz">
+        <img src="./images/client-audiophile.svg" alt="audiophile">
+        <img src="./images/client-meet.svg" alt="meet">
+        <img src="./images/client-maker.svg" alt="maker">
+      </div>
     </div>
-  </section>
-  <div class="hero-image">
-    <img src="image-hero-desktop.png" alt="Hero Illustration">
-  </div>
-</main>
+
+    <div class="image-container">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./images/image-hero-desktop.png">
+        <img src="./images/image-hero-mobile.png" alt="hero illustration">
+      </picture>
+    </div>
+  </main>
+</div>
+
 <!-- attribution -->
   
   <div class="attribution">
