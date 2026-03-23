@@ -187,7 +187,11 @@ a{
   display: block;
   margin-left: auto;
 }
+/* Hamburger Menu */
 
+.hamburger-menu-btn{
+  display: none;
+}
 /* Mobile Tweak */
 @media (max-width: 772px) {
   .hero {
@@ -196,9 +200,28 @@ a{
     display: flex;
     flex-direction: column-reverse;
   }
-  .desktop-only { display: none; }
-  .nav-links, .auth-links { display: none; } /* You'll need a hamburger menu for these */
+  .desktop-only { display: none; } 
+   .nav-links, .auth-links { display: none; } 
+
+  header {
+    position: relative;
+  }
+
+/* Hamburger Menu */
+  .hamburger-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+  }
+
+
 }
+
+
 
 /* attribution  */
 
