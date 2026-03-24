@@ -10,52 +10,47 @@
 </head>
 <body>
 <div class="content">
-  <header>
-
-    <!-- Hamburger Menu Button -->
-   <button 
-        type="button" 
-        class="hamburger-menu-btn" 
-        aria-label="open menu">
-    <img src="./images/icon-menu.svg" alt="hamburger menu"          class="hamburger-menu open">
-
-   </button>
-
-   <!-- overlay for mobile menu -->
-    <div class="menu-overlay"></div>
-
-   <!-- end Hamburger Menu Button -->
-    <nav>
-        <img src="./images/logo.svg" alt="snap logo" class="logo-img">
-    <div class="left-nav">
-           <ul class="nav-links ">
-          <li class="has-dropdown">
-            <a href="#" class="nav-item">Features <img class="arrow-down" src="./images/icon-arrow-down.svg" alt=""></a>
-            <ul class="sub-nav features-dropdown hidden-sub-nav">
-              <li><a href="#"><img src="./images/icon-todo.svg" alt=""> Todo List</a></li>
-              <li><a href="#"><img src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
-              <li><a href="#"><img src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
-              <li><a href="#"><img src="./images/icon-planning.svg" alt=""> Planning</a></li>
-            </ul>
-          </li>
-          <li class="has-dropdown">
-            <a href="#" class="nav-item">Company <img class="arrow-down" src="./images/icon-arrow-down.svg" alt=""></a>
-            <ul class="sub-nav company-dropdown hidden-sub-nav">
-              <li><a href="#">History</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </li>
-          <li><a href="#" class="nav-item">Careers</a></li>
-          <li><a href="#" class="nav-item">About</a></li>
-        </ul>
-    </div>
-      <div class="auth-links">
-        <a href="#" class="login">Login</a> 
-        <a href="#" class="register">Register</a>
-      </div>
+ <header class="header">
+  <a href="/" class="logo">
+    <img src="./images/logo.svg" alt="snap logo">
+  </a>
+  <div class="nav-wrapper"> 
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li class="has-dropdown">
+          <a href="#">Features <img class="arrow-down" src="./images/icon-arrow-down.svg" alt=""></a>
+          <ul class="sub-nav hidden">
+            <li><a href="#"><img src="./images/icon-todo.svg" alt=""> Todo List</a></li>
+            <li><a href="#"><img src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
+            <li><a href="#"><img src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
+            <li><a href="#"><img src="./images/icon-planning.svg" alt=""> Planning</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Company <img class="arrow-down" src="./images/icon-arrow-down.svg" alt=""></a>
+          <ul class="sub-nav hidden">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
     </nav>
-  </header>
+
+    <div class="auth-links">
+      <a href="#" class="login">Login</a>
+      <a href="#" class="register">Register</a>
+    </div>
+  </div>
+
+  <button type="button" class="hamburger-menu-btn" aria-label="menu toggle">
+    <img src="./images/icon-menu.svg" alt="" class="menu-icon">
+  </button>
+  
+  <div class="overlay"></div>
+</header>
 </div>
   <main class="hero">
     <div class="text-content">
