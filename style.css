@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Desktop Layout --- */
+
 /* --- Desktop Layout --- */
 .header {
   display: flex;
@@ -27,6 +27,7 @@ body {
   justify-content: space-between;
   padding: 1.5rem 2.5rem;
 }
+
 
 .nav-wrapper {
   display: flex;
@@ -41,50 +42,44 @@ body {
   gap: 2.5rem;
 }
 
-.hamburger-menu-btn { display: none; } /* Hide on desktop */
-
-/* --- Mobile Layout (Media Query) --- */
-@media (max-width: 768px) {
-  .hamburger-menu-btn {
-    display: block;
-    z-index: 1001; /* Above the menu */
-  }
-
-  .nav-wrapper {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Hidden */
-    flex-direction: column;
-    width: 65%;
-    height: 100vh;
-    background: white;
-    padding: 100px 30px;
-    align-items: flex-start;
-    transition: 0.3s ease;
-    z-index: 1000;
-  }
-
-  /* The class your JS toggles */
-  .nav-wrapper.active {
-    right: 0;
-  }
-
-  .nav-links, .auth-links {
-    flex-direction: column;
-    width: 100%;
-    text-align: left;
-  }
-
-  .auth-links {
-    margin-top: 2rem;
-    align-items: center;
-    gap: 1rem;
-  }
+.nav-links li a, .auth-links a {
+  color: var(--secondary-Gray-500);
   
-  .register {
-    width: 100%; /* Full width buttons look better on mobile */
-    text-align: center;
-  }
+}
+
+.arrow-down {
+  display: inline-block; 
+  transition: transform 0.3s ease;
+}
+
+.features-dropdown img{
+  margin-right: .5rem;
+}
+
+.company-dropdown{
+left:1px;
+}
+
+
+
+.sub-nav{
+  margin-top: 1rem;
+  position: absolute;
+  top: 100%;
+  right: .1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  z-index: 10;
+  width: 10rem;
+}
+
+.has-dropdown{
+  position: relative;
 }
 
 
@@ -107,6 +102,7 @@ body {
   font-size: clamp(3rem, 8vw, 5rem); /* Responsive font size */
   line-height: 1;
   margin-bottom: 3rem;
+  margin-top: 1rem;
 }
 
 .text-content p {
@@ -138,49 +134,7 @@ body {
 }
 /* Hamburger Menu */
 
-.hamburger-menu-btn{
 
-  .hamburger-menu-btn {
-    display: block;
-    z-index: 1001; /* Above the menu */
-  }
-
-  .nav-wrapper {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Hidden */
-    flex-direction: column;
-    width: 65%;
-    height: 100vh;
-    background: white;
-    padding: 100px 30px;
-    align-items: flex-start;
-    transition: 0.3s ease;
-    z-index: 1000;
-  }
-
-  /* The class your JS toggles */
-  .nav-wrapper.active {
-    right: 0;
-  }
-
-  .nav-links, .auth-links {
-    flex-direction: column;
-    width: 100%;
-    text-align: left;
-  }
-
-  .auth-links {
-    margin-top: 2rem;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .register {
-    width: 100%; /* Full width buttons look better on mobile */
-    text-align: center;
-  }
-}
 
 
 /* Hero Section */
@@ -259,6 +213,50 @@ body {
 /* Hamburger Menu */
 
 .hamburger-menu-btn{
+
+  .hamburger-menu-btn {
+    display: block;
+    z-index: 1001; /* Above the menu */
+  }
+
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden */
+    flex-direction: column;
+    width: 65%;
+    height: 100vh;
+    background: white;
+    padding: 100px 30px;
+    align-items: flex-start;
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* The class your JS toggles */
+  .nav-wrapper.active {
+    right: 0;
+  }
+
+  .nav-links, .auth-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+  }
+
+  .auth-links {
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .register {
+    width: 100%; /* Full width buttons look better on mobile */
+    text-align: center;
+  }
+}
+
+.hamburger-menu-btn{
   display: none;
 }
 /* Mobile Tweak */
@@ -309,12 +307,55 @@ body {
     }
 
 }
+.hamburger-menu-btn { display: none; } /* Hide on desktop */
 
+/* --- Mobile Layout (Media Query) --- */
+@media (max-width: 768px) {
+  .hamburger-menu-btn {
+    display: block;
+    z-index: 1001; /* Above the menu */
+  }
 
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden */
+    flex-direction: column;
+    width: 65%;
+    height: 100vh;
+    background: white;
+    padding: 100px 30px;
+    align-items: flex-start;
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
 
-/* hidden class for mobile nav */
+  /* The class your JS toggles */
+  .nav-wrapper.active {
+    right: 0;
+  }
+
+  .nav-links, .auth-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+  }
+
+  .auth-links {
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .register {
+    width: 100%; /* Full width buttons look better on mobile */
+    text-align: center;
+  }
+}
+
+/* hidden */
 .hidden {
-    display: none;
+  display: none;
 }
 
 /* attribution  */
