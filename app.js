@@ -18,3 +18,12 @@ dropdowns.forEach(item => {
     }
   });
 });
+
+// hamburger menu
+const hamburger = document.querySelector('.menu-icon');
+const navMenu = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+console.log('Hamburger menu clicked');
+
+});
