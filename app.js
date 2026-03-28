@@ -1,29 +1,52 @@
+// 1. Select all elements at the top
+const hamburgerBtn = document.querySelector('.hamburger-menu-btn');
+const navWrapper = document.querySelector('.nav-wrapper');
+const overlay = document.querySelector('.overlay');
 const dropdowns = document.querySelectorAll('.has-dropdown');
 
-dropdowns.forEach(item => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault(); 
-    
-    const subMenu = item.querySelector('.sub-nav');
-    const arrowImg = item.querySelector('.arrow-down'); 
-    subMenu.classList.toggle('hidden');
+// 2. Main Navigation Toggle (Hamburger & Overlay)
+function toggleMenu() {
+  const isOpen = navWrapper.classList.toggle('active');
+  overlay.classList.toggle('active');
   
-    const isOpen = !subMenu.classList.contains('hidden');
-    
-    if (arrowImg) {
+  // Handle body scroll
+  document.body.style.overflow = isOpen ? 'hidden' : 'auto';
 
-      arrowImg.src = isOpen
-        ? './images/icon-arrow-up.svg'
-        : './images/icon-arrow-down.svg';
-    }
-  });
-});
+  // Toggle Hamburger/Close Icon (Assuming you're using the background-image CSS method)
+  hamburgerBtn.classList.toggle('is-open');
+}
 
-// hamburger menu
-const hamburger = document.querySelector('.menu-icon');
-const navMenu = document.querySelector('.nav-links');
+// Single click listener for hamburger
+if (hamburgerBtn) {
+  hamburgerBtn.addEventListener('click', toggleMenu);
+}
 
-hamburger.addEventListener('click', () => {
-console.log('Hamburger menu clicked');
+// Single click listener for overlay (to close menu)
+if (overlay) {
+  overlay.addEventListener('click', toggleMenu);
+}
 
+// 3. Dropdown Logic
+dropdowns.forEach(item => {
+  // Select the link specifically to trigger the dropdown
+  const trigger = item.querySelector('a'); 
+  const subMenu = item.querySelector('.sub-nav');
+  const arrowImg = item.querySelector('.arrow-down'); 
+
+  if (trigger && subMenu) {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault(); 
+      e.stopPropagation(); // Prevents click from bubbling up
+      
+      const isHidden = subMenu.classList.toggle('hidden');
+      const isOpen = !isHidden;
+      
+      // Swap Arrow Image
+      if (arrowImg) {
+        arrowImg.src = isOpen 
+          ? './images/icon-arrow-up.svg' 
+          : './images/icon-arrow-down.svg';
+      }
+    });
+  }
 });
